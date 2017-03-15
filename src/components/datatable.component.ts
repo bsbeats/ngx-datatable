@@ -124,7 +124,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   @Input() set columns(val: any[]) {
-    if(val) {
+    if (val) {
       setColumnDefaults(val);
       this.recalculateColumns(val);
     }
@@ -640,20 +640,6 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
   @ViewChild(DataTableBodyComponent)
   bodyComponent: DataTableBodyComponent;
 
-  /**
-   * Returns if all rows are selected.
-   *
-   * @readonly
-   * @private
-   * @type {boolean}
-   * @memberOf DatatableComponent
-   */
-  get allRowsSelected(): boolean {
-    return this.selected &&
-      this.rows &&
-      this.selected.length === this.rows.length;
-  }
-
   element: HTMLElement;
   innerWidth: number;
   pageSize: number;
@@ -666,6 +652,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
   _rows: any[];
   _columns: any[];
   _columnTemplates: QueryList<DataTableColumnDirective>;
+  allRowsSelected: boolean;
 
   constructor(element: ElementRef, differs: KeyValueDiffers) {
     // get ref to elm for measuring
@@ -755,8 +742,8 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   recalculateColumns(columns: any[] = this.columns,
-                     forceIdx: number = -1,
-                     allowBleed: boolean = this.scrollbarH): any[] {
+    forceIdx: number = -1,
+    allowBleed: boolean = this.scrollbarH): any[] {
 
     if (!columns) return;
 
@@ -812,7 +799,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    *
    * @memberOf DatatableComponent
    */
-  onBodyPage({offset}: any): void {
+  onBodyPage({ offset }: any): void {
     this.offset = offset;
 
     this.page.emit({
@@ -905,7 +892,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    *
    * @memberOf DatatableComponent
    */
-  onColumnResize({column, newValue}: any): void {
+  onColumnResize({ column, newValue }: any): void {
     /* Safari/iOS 10.2 workaround */
     if (column === undefined) {
       return;
@@ -943,7 +930,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    *
    * @memberOf DatatableComponent
    */
-  onColumnReorder({column, newValue, prevValue}: any): void {
+  onColumnReorder({ column, newValue, prevValue }: any): void {
     const cols = this.columns.map(c => {
       return Object.assign({}, c);
     });
@@ -969,7 +956,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   onColumnSort(event: any): void {
-    const {sorts} = event;
+    const { sorts } = event;
 
     // this could be optimized better since it will resort
     // the rows again on the 'push' detection...
@@ -992,15 +979,15 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    *
    * @memberOf DatatableComponent
    */
-  onHeaderSelect(event: any): void {
+  onHeaderSelect(event: boolean): void {
     // before we splice, chk if we currently have all selected
-    const allSelected = this.selected.length === this.rows.length;
+    this.allRowsSelected = event;
 
     // remove all existing either way
     this.selected.splice(0, this.selected.length);
 
     // do the opposite here
-    if (!allSelected) {
+    if (this.allRowsSelected) {
       this.selected.push(...this.rows);
     }
 
@@ -1017,6 +1004,11 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   onBodySelect(event: any): void {
+    if (this.selected.length === this.rows.length && !this.allRowsSelected) {
+      this.allRowsSelected = true;
+    } else {
+      this.allRowsSelected = false;
+    }
     this.select.emit(event);
   }
 

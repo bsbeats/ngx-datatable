@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
           (activate)="onActivate($event)"
           (select)='onSelect($event)'>
           <ngx-datatable-column
-            [width]="30"
+            [width]="70"
             [sortable]="false"
             [canAutoResize]="false"
             [draggable]="false"
@@ -83,8 +83,19 @@ export class CheckboxSelectionComponent {
   onSelect({ selected }) {
     console.log('Select Event', selected, this.selected);
 
-    this.selected.splice(0, this.selected.length);
-    this.selected.push(...selected);
+    if (selected.length > 0) {
+      //If the value of the selected is different from the total value of the list it is because the selection is not of all
+       if (selected.length !== this.rows.length) {
+         this.selected.splice(0, this.selected.length);
+         this.selected.push(...selected);
+       } else {
+         this.selected = [];
+         this.selected = selected;
+       }
+     } else {
+       //If the selected is ZERO, then the checkbox header was deselected
+       this.selected = [];
+     }
   }
 
   onActivate(event) {
@@ -96,7 +107,7 @@ export class CheckboxSelectionComponent {
   }
 
   update() {
-    this.selected = [ this.rows[1], this.rows[3] ];
+    this.selected = [this.rows[1], this.rows[3]];
   }
 
   remove() {

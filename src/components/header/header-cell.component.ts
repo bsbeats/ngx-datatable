@@ -12,9 +12,10 @@ import { nextSortDir } from '../../utils';
       <label
         *ngIf="isCheckboxable" 
         class="datatable-checkbox">
+        {{allRowsSelected ? 'true' : 'false'}}
         <input 
           type="checkbox"
-          [attr.checked]="allRowsSelected"
+          [checked]="allRowsSelected"
           (change)="select.emit(!allRowsSelected)" 
         />
       </label>
@@ -72,12 +73,12 @@ export class DataTableHeaderCellComponent {
   get columnCssClasses(): any {
     let cls = 'datatable-header-cell';
 
-    if(this.column.sortable) cls += ' sortable';
-    if(this.column.resizeable) cls += ' resizeable';
-    if(this.column.cssClasses) cls += ' ' + this.column.cssClasses;
+    if (this.column.sortable) cls += ' sortable';
+    if (this.column.resizeable) cls += ' resizeable';
+    if (this.column.cssClasses) cls += ' ' + this.column.cssClasses;
 
     const sortDir = this.sortDir;
-    if(sortDir) {
+    if (sortDir) {
       cls += ` sort-active sort-${sortDir}`;
     }
 
@@ -105,8 +106,8 @@ export class DataTableHeaderCellComponent {
   }
 
   get isCheckboxable(): boolean {
-    return this.column.checkboxable && 
-      this.column.headerCheckboxable && 
+    return this.column.checkboxable &&
+      this.column.headerCheckboxable &&
       this.selectionType === SelectionType.checkbox;
   }
 
@@ -116,17 +117,17 @@ export class DataTableHeaderCellComponent {
   _sorts: any[];
 
   calcSortDir(sorts: any[]): any {
-    if(sorts && this.column) {
+    if (sorts && this.column) {
       const sort = sorts.find((s: any) => {
         return s.prop === this.column.prop;
       });
 
-      if(sort) return sort.dir;
+      if (sort) return sort.dir;
     }
   }
 
   onSort(): void {
-    if(!this.column.sortable) return;
+    if (!this.column.sortable) return;
 
     const newValue = nextSortDir(this.sortType, this.sortDir);
     this.sort.emit({
@@ -137,9 +138,9 @@ export class DataTableHeaderCellComponent {
   }
 
   calcSortClass(sortDir): string {
-    if(sortDir === SortDirection.asc) {
+    if (sortDir === SortDirection.asc) {
       return `sort-btn sort-asc ${this.sortAscendingIcon}`;
-    } else if(sortDir === SortDirection.desc) {
+    } else if (sortDir === SortDirection.desc) {
       return `sort-btn sort-desc ${this.sortDescendingIcon}`;
     } else {
       return `sort-btn`;
