@@ -14,7 +14,7 @@ import {
         *ngIf="rowDetail && rowDetail.template"
         [ngTemplateOutlet]="rowDetail.template"
         [ngOutletContext]="{ row: row }">
-      <template>
+      </template>
     </div>
   `,
   host: {

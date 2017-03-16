@@ -22,11 +22,7 @@ function View_DataTableHeaderCellComponent_1():import0.ɵViewDefinition {
         'datatable-checkbox'
       ]
     ],(null as any),(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),[
-      '\n        ',
-      '\n        '
-    ]
-    ),
+    import0.ɵted((null as any),['\n        ']),
       import0.ɵeld(0,(null as any),(null as any),0,'input',[[
         'type',
         'checkbox'
@@ -53,10 +49,8 @@ function View_DataTableHeaderCellComponent_1():import0.ɵViewDefinition {
   ]
   ,(null as any),(check,view) => {
     var comp:any = view.component;
-    const currVal_0:any = (comp.allRowsSelected? 'true': 'false');
-    check(view,1,0,currVal_0);
-    const currVal_1:any = comp.allRowsSelected;
-    check(view,2,0,currVal_1);
+    const currVal_0:any = comp.allRowsSelected;
+    check(view,2,0,currVal_0);
   });
 }
 function View_DataTableHeaderCellComponent_2():import0.ɵViewDefinition {
