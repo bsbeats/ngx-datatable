@@ -9,8 +9,8 @@ import { DataTableColumnDirective } from '.';
   template: `
     <ngx-datatable-column id="t1"></ngx-datatable-column>
     <ngx-datatable-column id="t2">
-      <ng-template></ng-template>
-      <ng-template></ng-template>
+      <template></template>
+      <template></template>
     </ngx-datatable-column>
   `
 })

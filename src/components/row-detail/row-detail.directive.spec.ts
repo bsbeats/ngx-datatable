@@ -9,7 +9,7 @@ import { DatatableRowDetailDirective, DatatableRowDetailTemplateDirective } from
   template: `
     <ngx-datatable-row-detail id="t1"></ngx-datatable-row-detail>
     <ngx-datatable-row-detail id="t2">
-      <ng-template ngx-datatable-row-detail-template></ng-template>
+      <template ngx-datatable-row-detail-template></template>
     </ngx-datatable-row-detail>
   `
 })
