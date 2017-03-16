@@ -11,7 +11,7 @@ import * as import2 from '../../../../build/components/footer/footer.component';
 import * as import3 from './pager.component.ngfactory';
 import * as import4 from '../../../../build/components/footer/pager.component';
 const styles_DataTableFooterComponent:any[] = ([] as any[]);
-export const RenderType_DataTableFooterComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_DataTableFooterComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_DataTableFooterComponent,
   data: {}
@@ -168,7 +168,7 @@ export function View_DataTableFooterComponent_0():import0.ɵViewDefinition {
     check(view,11,0,currVal_3);
   });
 }
-const RenderType_DataTableFooterComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_DataTableFooterComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}

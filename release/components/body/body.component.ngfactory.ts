@@ -19,7 +19,7 @@ import * as import10 from '../../../../build/components/body/body.component';
 import * as import11 from './selection.component.ngfactory';
 import * as import12 from '../../../../build/components/body/selection.component';
 const styles_DataTableBodyComponent:any[] = ([] as any[]);
-export const RenderType_DataTableBodyComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_DataTableBodyComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_DataTableBodyComponent,
   data: {}
@@ -459,7 +459,7 @@ export function View_DataTableBodyComponent_0():import0.ɵViewDefinition {
     check(view,12,0,currVal_8);
   },(null as any));
 }
-const RenderType_DataTableBodyComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_DataTableBodyComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}

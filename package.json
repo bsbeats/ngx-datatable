@@ -1,6 +1,6 @@
 {
   "name": "@swimlane/ngx-datatable",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "ngx-datatable is a Angular2+ table grid component for presenting large and complex data.",
   "main": "release/index.js",
   "typings": "release/index.d.ts",
@@ -58,7 +58,7 @@
     "grid",
     "table"
   ],
-  "author": "",
+  "author": "Diego Daibert <daibertdiego@gmail.com> (https://github.com/daibertdiego)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/swimlane/ngx-datatable/issues"
@@ -134,5 +134,9 @@
     "webpack-merge": "^4.0.0",
     "webpack-notifier": "^1.5.0",
     "zone.js": "^0.8.2"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {}
 }

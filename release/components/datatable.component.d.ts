@@ -407,15 +407,6 @@ export declare class DatatableComponent implements OnInit, AfterViewInit, DoChec
      * @memberOf DatatableComponent
      */
     bodyComponent: DataTableBodyComponent;
-    /**
-     * Returns if all rows are selected.
-     *
-     * @readonly
-     * @private
-     * @type {boolean}
-     * @memberOf DatatableComponent
-     */
-    readonly allRowsSelected: boolean;
     element: HTMLElement;
     innerWidth: number;
     pageSize: number;
@@ -427,6 +418,7 @@ export declare class DatatableComponent implements OnInit, AfterViewInit, DoChec
     _rows: any[];
     _columns: any[];
     _columnTemplates: QueryList<DataTableColumnDirective>;
+    allRowsSelected: boolean;
     constructor(element: ElementRef, differs: KeyValueDiffers);
     /**
      * Lifecycle hook that is called after data-bound
@@ -567,7 +559,7 @@ export declare class DatatableComponent implements OnInit, AfterViewInit, DoChec
      *
      * @memberOf DatatableComponent
      */
-    onHeaderSelect(event: any): void;
+    onHeaderSelect(event: boolean): void;
     /**
      * A row was selected from body
      *

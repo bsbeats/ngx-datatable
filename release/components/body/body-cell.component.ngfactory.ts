@@ -9,7 +9,7 @@ import * as import0 from '@angular/core';
 import * as import1 from '@angular/common';
 import * as import2 from '../../../../build/components/body/body-cell.component';
 const styles_DataTableBodyCellComponent:any[] = ([] as any[]);
-export const RenderType_DataTableBodyCellComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_DataTableBodyCellComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_DataTableBodyCellComponent,
   data: {}
@@ -157,7 +157,7 @@ export function View_DataTableBodyCellComponent_0():import0.ɵViewDefinition {
     check(view,10,0,currVal_2);
   },(null as any));
 }
-const RenderType_DataTableBodyCellComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_DataTableBodyCellComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}

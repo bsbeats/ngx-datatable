@@ -9,7 +9,7 @@ import * as import0 from '@angular/core';
 import * as import1 from '../../../../build/components/footer/pager.component';
 import * as import2 from '@angular/common';
 const styles_DataTablePagerComponent:any[] = ([] as any[]);
-export const RenderType_DataTablePagerComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_DataTablePagerComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_DataTablePagerComponent,
   data: {}
@@ -238,7 +238,7 @@ export function View_DataTablePagerComponent_0():import0.ɵViewDefinition {
     check(view,34,0,currVal_7);
   });
 }
-const RenderType_DataTablePagerComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_DataTablePagerComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}

@@ -497,23 +497,6 @@ var DatatableComponent = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(DatatableComponent.prototype, "allRowsSelected", {
-        /**
-         * Returns if all rows are selected.
-         *
-         * @readonly
-         * @private
-         * @type {boolean}
-         * @memberOf DatatableComponent
-         */
-        get: function () {
-            return this.selected &&
-                this.rows &&
-                this.selected.length === this.rows.length;
-        },
-        enumerable: true,
-        configurable: true
-    });
     /**
      * Lifecycle hook that is called after data-bound
      * properties of a directive are initialized.
@@ -807,11 +790,11 @@ var DatatableComponent = (function () {
      */
     DatatableComponent.prototype.onHeaderSelect = function (event) {
         // before we splice, chk if we currently have all selected
-        var allSelected = this.selected.length === this.rows.length;
+        this.allRowsSelected = event;
         // remove all existing either way
         this.selected.splice(0, this.selected.length);
         // do the opposite here
-        if (!allSelected) {
+        if (this.allRowsSelected) {
             (_a = this.selected).push.apply(_a, this.rows);
         }
         this.select.emit({
@@ -827,6 +810,12 @@ var DatatableComponent = (function () {
      * @memberOf DatatableComponent
      */
     DatatableComponent.prototype.onBodySelect = function (event) {
+        if (this.selected.length === this.rows.length && !this.allRowsSelected) {
+            this.allRowsSelected = true;
+        }
+        else {
+            this.allRowsSelected = false;
+        }
         this.select.emit(event);
     };
     return DatatableComponent;

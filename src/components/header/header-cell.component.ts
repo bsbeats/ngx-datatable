@@ -12,7 +12,6 @@ import { nextSortDir } from '../../utils';
       <label
         *ngIf="isCheckboxable" 
         class="datatable-checkbox">
-        {{allRowsSelected ? 'true' : 'false'}}
         <input 
           type="checkbox"
           [checked]="allRowsSelected"

@@ -16,7 +16,7 @@ import * as import7 from '../../../../build/components/header/header.component';
 import * as import8 from '../../../../build/directives/orderable.directive';
 import * as import9 from '@angular/platform-browser';
 const styles_DataTableHeaderComponent:any[] = ([] as any[]);
-export const RenderType_DataTableHeaderComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_DataTableHeaderComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_DataTableHeaderComponent,
   data: {}
@@ -221,18 +221,23 @@ function View_DataTableHeaderComponent_2():import0.ɵViewDefinition {
         'sortDescendingIcon'
       ]
       ,
-      selectionType: [
+      allRowsSelected: [
         4,
+        'allRowsSelected'
+      ]
+      ,
+      selectionType: [
+        5,
         'selectionType'
       ]
       ,
       headerHeight: [
-        5,
+        6,
         'headerHeight'
       ]
       ,
       sorts: [
-        6,
+        7,
         'sorts'
       ]
 
@@ -259,10 +264,11 @@ function View_DataTableHeaderComponent_2():import0.ɵViewDefinition {
     const currVal_7:any = view.context.$implicit;
     const currVal_8:any = comp.sortAscendingIcon;
     const currVal_9:any = comp.sortDescendingIcon;
-    const currVal_10:any = comp.selectionType;
-    const currVal_11:any = comp.headerHeight;
-    const currVal_12:any = comp.sorts;
-    check(view,4,0,currVal_6,currVal_7,currVal_8,currVal_9,currVal_10,currVal_11,currVal_12);
+    const currVal_10:any = comp.allRowsSelected;
+    const currVal_11:any = comp.selectionType;
+    const currVal_12:any = comp.headerHeight;
+    const currVal_13:any = comp.sorts;
+    check(view,4,0,currVal_6,currVal_7,currVal_8,currVal_9,currVal_10,currVal_11,currVal_12,currVal_13);
   },(check,view) => {
     var comp:any = view.component;
     const currVal_0:any = import0.ɵnov(view,2).resizeEnabled;
@@ -403,7 +409,7 @@ export function View_DataTableHeaderComponent_0():import0.ɵViewDefinition {
     check(view,1,0,currVal_0);
   });
 }
-const RenderType_DataTableHeaderComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_DataTableHeaderComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}

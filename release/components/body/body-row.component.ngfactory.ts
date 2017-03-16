@@ -11,7 +11,7 @@ import * as import2 from '../../../../build/components/body/body-cell.component'
 import * as import3 from '@angular/common';
 import * as import4 from '../../../../build/components/body/body-row.component';
 const styles_DataTableBodyRowComponent:any[] = ([] as any[]);
-export const RenderType_DataTableBodyRowComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_DataTableBodyRowComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_DataTableBodyRowComponent,
   data: {}
@@ -260,7 +260,7 @@ export function View_DataTableBodyRowComponent_0():import0.ɵViewDefinition {
     check(view,2,0,currVal_0,currVal_1);
   },(null as any));
 }
-const RenderType_DataTableBodyRowComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_DataTableBodyRowComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}

@@ -8,7 +8,7 @@
 import * as import0 from '@angular/core';
 import * as import1 from '../../../../build/components/body/progress-bar.component';
 const styles_ProgressBarComponent:any[] = ([] as any[]);
-export const RenderType_ProgressBarComponent:import0.RendererTypeV2 = import0.ɵcrt({
+export const RenderType_ProgressBarComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: styles_ProgressBarComponent,
   data: {}
@@ -48,7 +48,7 @@ export function View_ProgressBarComponent_0():import0.ɵViewDefinition {
   ]
   ,(null as any),(null as any));
 }
-const RenderType_ProgressBarComponent_Host:import0.RendererTypeV2 = import0.ɵcrt({
+const RenderType_ProgressBarComponent_Host:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
   styles: ([] as any[]),
   data: {}
