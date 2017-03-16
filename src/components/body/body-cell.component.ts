@@ -23,11 +23,11 @@ import { SortDirection } from '../../types';
         *ngIf="!column.cellTemplate"
         [innerHTML]="value">
       </span>
-      <ng-template
+      <template
         *ngIf="column.cellTemplate"
         [ngTemplateOutlet]="column.cellTemplate"
         [ngOutletContext]="{ value: value, row: row, column: column }">
-      </ng-template>
+      </template>
     </div>
   `,
   host: {
