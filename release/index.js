@@ -2386,7 +2386,7 @@ var DataTableBodyComponent = (function () {
             last = this.rowHeightsCache.getRowIndex(height + this.offsetY) + 1;
         }
         else {
-            first = Math.max(this.offset * this.pageSize, 0);
+          //  first = Math.max(this.offset * this.pageSize, 0);
             last = Math.min((first + this.pageSize), this.rowCount);
         }
         this.indexes = { first: first, last: last };
