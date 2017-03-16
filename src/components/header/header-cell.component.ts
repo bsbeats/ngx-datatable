@@ -28,7 +28,7 @@ import { nextSortDir } from '../../utils';
           [innerHTML]="name">
         </span>
       </span>
-      <ng-template
+      <template
         *ngIf="column.headerTemplate"
         [ngTemplateOutlet]="column.headerTemplate"
         [ngOutletContext]="{ 
@@ -36,7 +36,7 @@ import { nextSortDir } from '../../utils';
           sortDir: sortDir,
           sortFn: sortFn
         }">
-      </ng-template>
+      </template>
       <span
         (click)="onSort()"
         [class]="sortClass">
