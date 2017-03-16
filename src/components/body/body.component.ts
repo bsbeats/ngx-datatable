@@ -418,7 +418,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
       first = this.rowHeightsCache.getRowIndex(this.offsetY);
       last = this.rowHeightsCache.getRowIndex(height + this.offsetY) + 1;
     } else {
-      first = Math.max(this.offset * this.pageSize, 0);
+     // first = Math.max(this.offset * this.pageSize, 0);
       last = Math.min((first + this.pageSize), this.rowCount);
     }
 
