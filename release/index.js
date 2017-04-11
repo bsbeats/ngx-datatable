@@ -4423,9 +4423,12 @@ var DataTableBodyComponent = (function () {
      *
      * @memberOf DataTableBodyComponent
      */
-    DataTableBodyComponent.prototype.updateIndexes = function () {
+     DataTableBodyComponent.prototype.updateIndexes = function () {
         var first = 0;
         var last = 0;
+      
+      //AJUSTE PARA RESOLVER PROB DA PAGINAÇÂO SERVER E CLIENT SIDE
+      if(this.externalPaging){
         if (this.scrollbarV) {
             // Calculation of the first and last indexes will be based on where the
             // scrollY position would be at.  The last index would be the one
@@ -4435,10 +4438,23 @@ var DataTableBodyComponent = (function () {
             last = this.rowHeightsCache.getRowIndex(height + this.offsetY) + 1;
         }
         else {
-          //  first = Math.max(this.offset * this.pageSize, 0);
             last = Math.min((first + this.pageSize), this.rowCount);
         }
-        this.indexes = { first: first, last: last };
+      }else{
+        if (this.scrollbarV) {
+            // Calculation of the first and last indexes will be based on where the
+            // scrollY position would be at.  The last index would be the one
+            // that shows up inside the view port the last.
+            var height = parseInt(this.bodyHeight, 0);
+            first = this.rowHeightsCache.getRowIndex(this.offsetY);
+            last = this.rowHeightsCache.getRowIndex(height + this.offsetY) + 1;
+        }
+        else {
+            first = Math.max(this.offset * this.pageSize, 0);
+            last = Math.min((first + this.pageSize), this.rowCount);
+        }
+      }
+      this.indexes = { first: first, last: last };
     };
     /**
      * Refreshes the full Row Height cache.  Should be used
