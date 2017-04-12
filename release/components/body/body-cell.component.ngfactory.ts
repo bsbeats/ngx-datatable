@@ -5,6 +5,7 @@
  */
  /* tslint:disable */
 
+
 import * as import0 from '@angular/core';
 import * as import1 from '@angular/common';
 import * as import2 from '../../../../build/components/body/body-cell.component';
@@ -15,20 +16,20 @@ export const RenderType_DataTableBodyCellComponent:import0.RendererType2 = impor
   data: {}
 }
 );
-function View_DataTableBodyCellComponent_1():import0.ɵViewDefinition {
+function View_DataTableBodyCellComponent_1(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-      import0.ɵeld(0,(null as any),(null as any),3,'label',[[
+      (l()(),import0.ɵeld(0,(null as any),(null as any),3,'label',[[
         'class',
         'datatable-checkbox'
       ]
-    ],(null as any),(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),['\n        ']),
-      import0.ɵeld(0,(null as any),(null as any),0,'input',[[
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n        '])),
+      (l()(),import0.ɵeld(0,(null as any),(null as any),0,'input',[[
         'type',
         'checkbox'
       ]
       ],[[
-        3,
+        8,
         'checked',
         0
       ]
@@ -36,45 +37,45 @@ function View_DataTableBodyCellComponent_1():import0.ɵViewDefinition {
         (null as any),
         'click'
       ]
-    ],(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      var comp:any = view.component;
-      if (('click' === eventName)) {
-        const pd_0:any = ((<any>comp.onCheckboxChange($event)) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:any = v.component;
+      if (('click' === en)) {
+        const pd_0:any = ((<any>co.onCheckboxChange($event)) !== false);
+        ad = (pd_0 && ad);
       }
-      return allowDefault;
-    },(null as any),(null as any)),
-    import0.ɵted((null as any),['\n      '])
+      return ad;
+    },(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n      ']))
   ]
-  ,(null as any),(check,view) => {
-    var comp:any = view.component;
-    const currVal_0:any = comp.isSelected;
-    check(view,2,0,currVal_0);
+  ,(null as any),(ck,v) => {
+    var co:any = v.component;
+    const currVal_0:any = co.isSelected;
+    ck(v,2,0,currVal_0);
   });
 }
-function View_DataTableBodyCellComponent_2():import0.ɵViewDefinition {
+function View_DataTableBodyCellComponent_2(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-      import0.ɵeld(0,(null as any),(null as any),1,'span',([] as any[]),[[
-        3,
+      (l()(),import0.ɵeld(0,(null as any),(null as any),1,'span',([] as any[]),[[
+        8,
         'innerHTML',
         1
       ]
-    ],(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),['\n      '])
+    ],(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n      ']))
   ]
-  ,(null as any),(check,view) => {
-    var comp:any = view.component;
-    const currVal_0:any = comp.value;
-    check(view,0,0,currVal_0);
+  ,(null as any),(ck,v) => {
+    var co:any = v.component;
+    const currVal_0:any = co.value;
+    ck(v,0,0,currVal_0);
   });
 }
-function View_DataTableBodyCellComponent_4():import0.ɵViewDefinition {
-  return import0.ɵvid(0,[import0.ɵted((null as any),['\n      '])],(null as any),(null as any));
+function View_DataTableBodyCellComponent_4(l:any):import0.ɵViewDefinition {
+  return import0.ɵvid(0,[(l()(),import0.ɵted((null as any),['\n      ']))],(null as any),(null as any));
 }
-function View_DataTableBodyCellComponent_3():import0.ɵViewDefinition {
+function View_DataTableBodyCellComponent_3(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-    import0.ɵand(8388608,(null as any),(null as any),2,(null as any),View_DataTableBodyCellComponent_4),
+    (l()(),import0.ɵand(8388608,(null as any),(null as any),2,(null as any),View_DataTableBodyCellComponent_4)),
     import0.ɵdid(270336,(null as any),0,import1.NgTemplateOutlet,[import0.ViewContainerRef],{
       ngTemplateOutlet: [
         0,
@@ -94,25 +95,25 @@ function View_DataTableBodyCellComponent_3():import0.ɵViewDefinition {
       'column'
     ]
     ),
-    import0.ɵand(0,(null as any),(null as any),0)
+    (l()(),import0.ɵand(0,(null as any),(null as any),0))
   ]
-  ,(check,view) => {
-    var comp:any = view.component;
-    const currVal_0:any = comp.column.cellTemplate;
-    const currVal_1:any = check(view,2,0,comp.value,comp.row,comp.column);
-    check(view,1,0,currVal_0,currVal_1);
+  ,(ck,v) => {
+    var co:any = v.component;
+    const currVal_0:any = co.column.cellTemplate;
+    const currVal_1:any = ck(v,2,0,co.value,co.row,co.column);
+    ck(v,1,0,currVal_0,currVal_1);
   },(null as any));
 }
-export function View_DataTableBodyCellComponent_0():import0.ɵViewDefinition {
+export function View_DataTableBodyCellComponent_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-    import0.ɵted((null as any),['\n    ']),
-      import0.ɵeld(0,(null as any),(null as any),10,'div',[[
+    (l()(),import0.ɵted((null as any),['\n    '])),
+      (l()(),import0.ɵeld(0,(null as any),(null as any),10,'div',[[
         'class',
         'datatable-body-cell-label'
       ]
-    ],(null as any),(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),['\n      ']),
-    import0.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DataTableBodyCellComponent_1),
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n      '])),
+    (l()(),import0.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DataTableBodyCellComponent_1)),
     import0.ɵdid(8192,(null as any),0,import1.NgIf,[
       import0.ViewContainerRef,
       import0.TemplateRef
@@ -122,8 +123,8 @@ export function View_DataTableBodyCellComponent_0():import0.ɵViewDefinition {
         'ngIf'
       ]
     },(null as any)),
-    import0.ɵted((null as any),['\n      ']),
-    import0.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DataTableBodyCellComponent_2),
+    (l()(),import0.ɵted((null as any),['\n      '])),
+    (l()(),import0.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DataTableBodyCellComponent_2)),
     import0.ɵdid(8192,(null as any),0,import1.NgIf,[
       import0.ViewContainerRef,
       import0.TemplateRef
@@ -133,8 +134,8 @@ export function View_DataTableBodyCellComponent_0():import0.ɵViewDefinition {
         'ngIf'
       ]
     },(null as any)),
-    import0.ɵted((null as any),['\n      ']),
-    import0.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DataTableBodyCellComponent_3),
+    (l()(),import0.ɵted((null as any),['\n      '])),
+    (l()(),import0.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DataTableBodyCellComponent_3)),
     import0.ɵdid(8192,(null as any),0,import1.NgIf,[
       import0.ViewContainerRef,
       import0.TemplateRef
@@ -144,66 +145,64 @@ export function View_DataTableBodyCellComponent_0():import0.ɵViewDefinition {
         'ngIf'
       ]
     },(null as any)),
-    import0.ɵted((null as any),['\n    ']),
-    import0.ɵted((null as any),['\n  '])
+    (l()(),import0.ɵted((null as any),['\n    '])),
+    (l()(),import0.ɵted((null as any),['\n  ']))
   ]
-  ,(check,view) => {
-    var comp:import2.DataTableBodyCellComponent = view.component;
-    const currVal_0:any = comp.column.checkboxable;
-    check(view,4,0,currVal_0);
-    const currVal_1:boolean = !comp.column.cellTemplate;
-    check(view,7,0,currVal_1);
-    const currVal_2:any = comp.column.cellTemplate;
-    check(view,10,0,currVal_2);
+  ,(ck,v) => {
+    var co:import2.DataTableBodyCellComponent = v.component;
+    const currVal_0:any = co.column.checkboxable;
+    ck(v,4,0,currVal_0);
+    const currVal_1:boolean = !co.column.cellTemplate;
+    ck(v,7,0,currVal_1);
+    const currVal_2:any = co.column.cellTemplate;
+    ck(v,10,0,currVal_2);
   },(null as any));
 }
-const RenderType_DataTableBodyCellComponent_Host:import0.RendererType2 = import0.ɵcrt({
-  encapsulation: 2,
-  styles: ([] as any[]),
-  data: {}
-}
-);
-function View_DataTableBodyCellComponent_Host_0():import0.ɵViewDefinition {
+function View_DataTableBodyCellComponent_Host_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-      import0.ɵeld(0,(null as any),(null as any),1,'datatable-body-cell',[[
+      (l()(),import0.ɵeld(0,(null as any),(null as any),1,'datatable-body-cell',[[
         'class',
         'datatable-body-cell'
       ]
     ],[
       [
-        3,
+        8,
         'className',
         0
       ]
       ,
       [
-        1,
-        'active'
-      ]
-      ,
-      [
-        1,
-        'sort-active'
-      ]
-      ,
-      [
-        1,
-        'sort-asc'
-      ]
-      ,
-      [
-        1,
-        'sort-desc'
+        2,
+        'active',
+        (null as any)
       ]
       ,
       [
         2,
+        'sort-active',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'sort-asc',
+        (null as any)
+      ]
+      ,
+      [
+        2,
+        'sort-desc',
+        (null as any)
+      ]
+      ,
+      [
+        4,
         'width',
         'px'
       ]
       ,
       [
-        2,
+        4,
         'height',
         (null as any)
       ]
@@ -236,41 +235,49 @@ function View_DataTableBodyCellComponent_Host_0():import0.ɵViewDefinition {
       ]
 
     ]
-    ,(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      if (('focus' === eventName)) {
-        const pd_0:any = ((<any>import0.ɵnov(view,1).onFocus()) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ,(v,en,$event) => {
+      var ad:boolean = true;
+      if (('focus' === en)) {
+        const pd_0:any = ((<any>import0.ɵnov(v,1).onFocus()) !== false);
+        ad = (pd_0 && ad);
       }
-      if (('blur' === eventName)) {
-        const pd_1:any = ((<any>import0.ɵnov(view,1).onBlur()) !== false);
-        allowDefault = (pd_1 && allowDefault);
+      if (('blur' === en)) {
+        const pd_1:any = ((<any>import0.ɵnov(v,1).onBlur()) !== false);
+        ad = (pd_1 && ad);
       }
-      if (('click' === eventName)) {
-        const pd_2:any = ((<any>import0.ɵnov(view,1).onClick($event)) !== false);
-        allowDefault = (pd_2 && allowDefault);
+      if (('click' === en)) {
+        const pd_2:any = ((<any>import0.ɵnov(v,1).onClick($event)) !== false);
+        ad = (pd_2 && ad);
       }
-      if (('dblclick' === eventName)) {
-        const pd_3:any = ((<any>import0.ɵnov(view,1).onDblClick($event)) !== false);
-        allowDefault = (pd_3 && allowDefault);
+      if (('dblclick' === en)) {
+        const pd_3:any = ((<any>import0.ɵnov(v,1).onDblClick($event)) !== false);
+        ad = (pd_3 && ad);
       }
-      if (('keydown' === eventName)) {
-        const pd_4:any = ((<any>import0.ɵnov(view,1).onKeyDown($event)) !== false);
-        allowDefault = (pd_4 && allowDefault);
+      if (('keydown' === en)) {
+        const pd_4:any = ((<any>import0.ɵnov(v,1).onKeyDown($event)) !== false);
+        ad = (pd_4 && ad);
       }
-      return allowDefault;
-    },View_DataTableBodyCellComponent_0,RenderType_DataTableBodyCellComponent),
+      return ad;
+    },View_DataTableBodyCellComponent_0,RenderType_DataTableBodyCellComponent)),
     import0.ɵdid(24576,(null as any),0,import2.DataTableBodyCellComponent,[import0.ElementRef],(null as any),(null as any))
   ]
-  ,(null as any),(check,view) => {
-    const currVal_0:any = import0.ɵnov(view,1).columnCssClasses;
-    const currVal_1:any = import0.ɵnov(view,1).isFocused;
-    const currVal_2:any = import0.ɵnov(view,1).isSortActive;
-    const currVal_3:any = import0.ɵnov(view,1).isSortAscending;
-    const currVal_4:any = import0.ɵnov(view,1).isSortDescending;
-    const currVal_5:any = import0.ɵnov(view,1).width;
-    const currVal_6:any = import0.ɵnov(view,1).height;
-    check(view,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6);
+  ,(null as any),(ck,v) => {
+    const currVal_0:any = import0.ɵnov(v,1).columnCssClasses;
+    const currVal_1:any = import0.ɵnov(v,1).isFocused;
+    const currVal_2:any = import0.ɵnov(v,1).isSortActive;
+    const currVal_3:any = import0.ɵnov(v,1).isSortAscending;
+    const currVal_4:any = import0.ɵnov(v,1).isSortDescending;
+    const currVal_5:any = import0.ɵnov(v,1).width;
+    const currVal_6:any = import0.ɵnov(v,1).height;
+    ck(v,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6);
   });
 }
-export const DataTableBodyCellComponentNgFactory:import0.ComponentFactory<import2.DataTableBodyCellComponent> = import0.ɵccf('datatable-body-cell',import2.DataTableBodyCellComponent,View_DataTableBodyCellComponent_Host_0);
+export const DataTableBodyCellComponentNgFactory:import0.ComponentFactory<import2.DataTableBodyCellComponent> = import0.ɵccf('datatable-body-cell',import2.DataTableBodyCellComponent,View_DataTableBodyCellComponent_Host_0,{
+  row: 'row',
+  column: 'column',
+  rowHeight: 'rowHeight',
+  isSelected: 'isSelected',
+  sorts: 'sorts'
+}
+,{activate: 'activate'},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L2JvZHktY2VsbC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9kYWliZXJ0ZGllZ28vRGVza3RvcC9uZ3gvbmd4LWRhdGF0YWJsZS9idWlsZC9jb21wb25lbnRzL2JvZHkvYm9keS1jZWxsLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L2JvZHktY2VsbC5jb21wb25lbnQudHMuRGF0YVRhYmxlQm9keUNlbGxDb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L2JvZHktY2VsbC5jb21wb25lbnQudHMuRGF0YVRhYmxlQm9keUNlbGxDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8ZGl2IGNsYXNzPVwiZGF0YXRhYmxlLWJvZHktY2VsbC1sYWJlbFwiPlxuICAgICAgPGxhYmVsXG4gICAgICAgICpuZ0lmPVwiY29sdW1uLmNoZWNrYm94YWJsZVwiIFxuICAgICAgICBjbGFzcz1cImRhdGF0YWJsZS1jaGVja2JveFwiPlxuICAgICAgICA8aW5wdXQgXG4gICAgICAgICAgdHlwZT1cImNoZWNrYm94XCJcbiAgICAgICAgICBbY2hlY2tlZF09XCJpc1NlbGVjdGVkXCJcbiAgICAgICAgICAoY2xpY2spPVwib25DaGVja2JveENoYW5nZSgkZXZlbnQpXCIgXG4gICAgICAgIC8+XG4gICAgICA8L2xhYmVsPlxuICAgICAgPHNwYW5cbiAgICAgICAgKm5nSWY9XCIhY29sdW1uLmNlbGxUZW1wbGF0ZVwiXG4gICAgICAgIFtpbm5lckhUTUxdPVwidmFsdWVcIj5cbiAgICAgIDwvc3Bhbj5cbiAgICAgIDx0ZW1wbGF0ZVxuICAgICAgICAqbmdJZj1cImNvbHVtbi5jZWxsVGVtcGxhdGVcIlxuICAgICAgICBbbmdUZW1wbGF0ZU91dGxldF09XCJjb2x1bW4uY2VsbFRlbXBsYXRlXCJcbiAgICAgICAgW25nT3V0bGV0Q29udGV4dF09XCJ7IHZhbHVlOiB2YWx1ZSwgcm93OiByb3csIGNvbHVtbjogY29sdW1uIH1cIj5cbiAgICAgIDwvdGVtcGxhdGU+XG4gICAgPC9kaXY+XG4gICIsIjxkYXRhdGFibGUtYm9keS1jZWxsPjwvZGF0YXRhYmxlLWJvZHktY2VsbD4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQ0VNO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFFNkI7TUFDM0I7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFHRTtRQUFBO1FBQUE7TUFBQTtNQUhGO0lBQUE7SUFJRTs7OztJQUZBO0lBRkYsU0FFRSxTQUZGOzs7OztNQU1GO1FBQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUVzQjs7OztJQUFwQjtJQUZGLFNBRUUsU0FGRjs7Ozt5QkFPaUU7Ozs7SUFIakU7Z0JBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO2dCQUdFO01BQUE7TUFBQTtNQUFBO0lBQUE7SUFBQTs7Ozs7SUFEQTtJQUNBO0lBSEYsU0FFRSxVQUNBLFNBSEY7Ozs7O0lBZk47TUFDSTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXVDO0lBQ3JDO2dCQUFBOzs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFRUTtJQUNSO2dCQUFBOzs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFHTztJQUNQO2dCQUFBOzs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFJVztJQUNQOzs7O0lBakJGO0lBREYsU0FDRSxTQURGO0lBVUU7SUFERixTQUNFLFNBREY7SUFLRTtJQURGLFVBQ0UsU0FERjs7Ozs7TUNmTjtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO0lBQUE7Z0JBQUE7OztJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsU0FBQSxxRUFBQTs7Ozs7Ozs7OzsifQ==

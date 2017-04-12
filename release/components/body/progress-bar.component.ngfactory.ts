@@ -5,6 +5,7 @@
  */
  /* tslint:disable */
 
+
 import * as import0 from '@angular/core';
 import * as import1 from '../../../../build/components/body/progress-bar.component';
 const styles_ProgressBarComponent:any[] = ([] as any[]);
@@ -14,10 +15,10 @@ export const RenderType_ProgressBarComponent:import0.RendererType2 = import0.ɵc
   data: {}
 }
 );
-export function View_ProgressBarComponent_0():import0.ɵViewDefinition {
+export function View_ProgressBarComponent_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(2,[
-    import0.ɵted((null as any),['\n    ']),
-    import0.ɵeld(0,(null as any),(null as any),6,'div',[
+    (l()(),import0.ɵted((null as any),['\n    '])),
+    (l()(),import0.ɵeld(0,(null as any),(null as any),6,'div',[
       [
         'class',
         'progress-linear'
@@ -29,36 +30,31 @@ export function View_ProgressBarComponent_0():import0.ɵViewDefinition {
       ]
 
     ]
-    ,(null as any),(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),['\n      ']),
-      import0.ɵeld(0,(null as any),(null as any),3,'div',[[
+    ,(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n      '])),
+      (l()(),import0.ɵeld(0,(null as any),(null as any),3,'div',[[
         'class',
         'container'
       ]
-    ],(null as any),(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),['\n        ']),
-      import0.ɵeld(0,(null as any),(null as any),0,'div',[[
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n        '])),
+      (l()(),import0.ɵeld(0,(null as any),(null as any),0,'div',[[
         'class',
         'bar'
       ]
-    ],(null as any),(null as any),(null as any),(null as any),(null as any)),
-    import0.ɵted((null as any),['\n      ']),
-    import0.ɵted((null as any),['\n    ']),
-    import0.ɵted((null as any),['\n  '])
+    ],(null as any),(null as any),(null as any),(null as any),(null as any))),
+    (l()(),import0.ɵted((null as any),['\n      '])),
+    (l()(),import0.ɵted((null as any),['\n    '])),
+    (l()(),import0.ɵted((null as any),['\n  ']))
   ]
   ,(null as any),(null as any));
 }
-const RenderType_ProgressBarComponent_Host:import0.RendererType2 = import0.ɵcrt({
-  encapsulation: 2,
-  styles: ([] as any[]),
-  data: {}
-}
-);
-function View_ProgressBarComponent_Host_0():import0.ɵViewDefinition {
+function View_ProgressBarComponent_Host_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-    import0.ɵeld(0,(null as any),(null as any),1,'datatable-progress',([] as any[]),(null as any),(null as any),(null as any),View_ProgressBarComponent_0,RenderType_ProgressBarComponent),
+    (l()(),import0.ɵeld(0,(null as any),(null as any),1,'datatable-progress',([] as any[]),(null as any),(null as any),(null as any),View_ProgressBarComponent_0,RenderType_ProgressBarComponent)),
     import0.ɵdid(24576,(null as any),0,import1.ProgressBarComponent,([] as any[]),(null as any),(null as any))
   ]
   ,(null as any),(null as any));
 }
-export const ProgressBarComponentNgFactory:import0.ComponentFactory<import1.ProgressBarComponent> = import0.ɵccf('datatable-progress',import1.ProgressBarComponent,View_ProgressBarComponent_Host_0);
+export const ProgressBarComponentNgFactory:import0.ComponentFactory<import1.ProgressBarComponent> = import0.ɵccf('datatable-progress',import1.ProgressBarComponent,View_ProgressBarComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L3Byb2dyZXNzLWJhci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vaG9tZS9kYWliZXJ0ZGllZ28vRGVza3RvcC9uZ3gvbmd4LWRhdGF0YWJsZS9idWlsZC9jb21wb25lbnRzL2JvZHkvcHJvZ3Jlc3MtYmFyLmNvbXBvbmVudC50cyIsIm5nOi8vL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L3Byb2dyZXNzLWJhci5jb21wb25lbnQudHMuUHJvZ3Jlc3NCYXJDb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L3Byb2dyZXNzLWJhci5jb21wb25lbnQudHMuUHJvZ3Jlc3NCYXJDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8ZGl2IGNsYXNzPVwicHJvZ3Jlc3MtbGluZWFyXCIgcm9sZT1cInByb2dyZXNzYmFyXCI+XG4gICAgICA8ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJiYXJcIj48L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICAiLCI8ZGF0YXRhYmxlLXByb2dyZXNzPjwvZGF0YXRhYmxlLXByb2dyZXNzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNBQTtJQUNJO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUFnRDtNQUM5QztRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXVCO01BQ3JCO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBdUI7SUFDbkI7SUFDRjs7Ozs7O0lDTFY7Z0JBQUE7Ozs7In0=

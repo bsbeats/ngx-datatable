@@ -5,6 +5,7 @@
  */
  /* tslint:disable */
 
+
 import * as import0 from './datatable.component.css.ngstyle';
 import * as import1 from '@angular/core';
 import * as import2 from './header/header.component.ngfactory';
@@ -23,21 +24,21 @@ export const RenderType_DatatableComponent:import1.RendererType2 = import1.ɵcrt
   data: {}
 }
 );
-function View_DatatableComponent_1():import1.ɵViewDefinition {
+function View_DatatableComponent_1(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
-      import1.ɵeld(0,(null as any),(null as any),2,'datatable-header',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),2,'datatable-header',[[
         'class',
         'datatable-header'
       ]
     ],[
       [
-        2,
+        4,
         'height',
         (null as any)
       ]
       ,
       [
-        2,
+        4,
         'width',
         (null as any)
       ]
@@ -65,27 +66,27 @@ function View_DatatableComponent_1():import1.ɵViewDefinition {
       ]
 
     ]
-    ,(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      var comp:any = view.component;
-      if (('sort' === eventName)) {
-        const pd_0:any = ((<any>comp.onColumnSort($event)) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ,(v,en,$event) => {
+      var ad:boolean = true;
+      var co:any = v.component;
+      if (('sort' === en)) {
+        const pd_0:any = ((<any>co.onColumnSort($event)) !== false);
+        ad = (pd_0 && ad);
       }
-      if (('resize' === eventName)) {
-        const pd_1:any = ((<any>comp.onColumnResize($event)) !== false);
-        allowDefault = (pd_1 && allowDefault);
+      if (('resize' === en)) {
+        const pd_1:any = ((<any>co.onColumnResize($event)) !== false);
+        ad = (pd_1 && ad);
       }
-      if (('reorder' === eventName)) {
-        const pd_2:any = ((<any>comp.onColumnReorder($event)) !== false);
-        allowDefault = (pd_2 && allowDefault);
+      if (('reorder' === en)) {
+        const pd_2:any = ((<any>co.onColumnReorder($event)) !== false);
+        ad = (pd_2 && ad);
       }
-      if (('select' === eventName)) {
-        const pd_3:any = ((<any>comp.onHeaderSelect($event)) !== false);
-        allowDefault = (pd_3 && allowDefault);
+      if (('select' === en)) {
+        const pd_3:any = ((<any>co.onHeaderSelect($event)) !== false);
+        ad = (pd_3 && ad);
       }
-      return allowDefault;
-    },import2.View_DataTableHeaderComponent_0,import2.RenderType_DataTableHeaderComponent),
+      return ad;
+    },import2.View_DataTableHeaderComponent_0,import2.RenderType_DataTableHeaderComponent)),
     import1.ɵdid(24576,(null as any),0,import3.DataTableHeaderComponent,([] as any[]),{
       sortAscendingIcon: [
         0,
@@ -155,25 +156,23 @@ function View_DatatableComponent_1():import1.ɵViewDefinition {
       select: 'select'
     }
     ),
-    import1.ɵted((null as any),['\n      '])
+    (l()(),import1.ɵted((null as any),['\n      ']))
   ]
-  ,(check,view) => {
-    var comp:any = view.component;
-    const currVal_0:any = comp.cssClasses.sortAscending;
-    const currVal_1:any = comp.cssClasses.sortDescending;
-    const currVal_2:any = comp.scrollbarH;
-    const currVal_3:any = comp.innerWidth;
-    const currVal_4:any = comp.offsetX;
-    const currVal_5:any = comp.sorts;
-    const currVal_6:any = comp.sortType;
-    const currVal_7:any = comp.allRowsSelected;
-    const currVal_8:any = comp.selectionType;
-    const currVal_9:any = comp.reorderable;
-    const currVal_10:any = comp.headerHeight;
-    const currVal_11:any = comp.columns;
-    check(view,1,1,[
-      currVal_0,
-      currVal_1,
+  ,(ck,v) => {
+    var co:any = v.component;
+    const currVal_2:any = co.cssClasses.sortAscending;
+    const currVal_3:any = co.cssClasses.sortDescending;
+    const currVal_4:any = co.scrollbarH;
+    const currVal_5:any = co.innerWidth;
+    const currVal_6:any = co.offsetX;
+    const currVal_7:any = co.sorts;
+    const currVal_8:any = co.sortType;
+    const currVal_9:any = co.allRowsSelected;
+    const currVal_10:any = co.selectionType;
+    const currVal_11:any = co.reorderable;
+    const currVal_12:any = co.headerHeight;
+    const currVal_13:any = co.columns;
+    ck(v,1,1,[
       currVal_2,
       currVal_3,
       currVal_4,
@@ -183,19 +182,20 @@ function View_DatatableComponent_1():import1.ɵViewDefinition {
       currVal_8,
       currVal_9,
       currVal_10,
-      currVal_11
+      currVal_11,
+      currVal_12,
+      currVal_13
     ]
     );
-  },(check,view) => {
-    var comp:any = view.component;
-    const currVal_0:any = import1.ɵnov(view,1).headerHeight;
-    const currVal_1:any = import1.ɵnov(view,1).headerWidth;
-    check(view,0,0,currVal_0,currVal_1);
+  },(ck,v) => {
+    const currVal_0:any = import1.ɵnov(v,1).headerHeight;
+    const currVal_1:any = import1.ɵnov(v,1).headerWidth;
+    ck(v,0,0,currVal_0,currVal_1);
   });
 }
-function View_DatatableComponent_2():import1.ɵViewDefinition {
+function View_DatatableComponent_2(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
-      import1.ɵeld(0,(null as any),(null as any),2,'datatable-footer',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),2,'datatable-footer',[[
         'class',
         'datatable-footer'
       ]
@@ -203,15 +203,15 @@ function View_DatatableComponent_2():import1.ɵViewDefinition {
         (null as any),
         'page'
       ]
-    ],(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      var comp:any = view.component;
-      if (('page' === eventName)) {
-        const pd_0:any = ((<any>comp.onFooterPage($event)) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:any = v.component;
+      if (('page' === en)) {
+        const pd_0:any = ((<any>co.onFooterPage($event)) !== false);
+        ad = (pd_0 && ad);
       }
-      return allowDefault;
-    },import4.View_DataTableFooterComponent_0,import4.RenderType_DataTableFooterComponent),
+      return ad;
+    },import4.View_DataTableFooterComponent_0,import4.RenderType_DataTableFooterComponent)),
     import1.ɵdid(24576,(null as any),0,import5.DataTableFooterComponent,([] as any[]),{
       footerHeight: [
         0,
@@ -270,22 +270,22 @@ function View_DatatableComponent_2():import1.ɵViewDefinition {
 
     }
     ,{page: 'page'}),
-    import1.ɵted((null as any),['\n      '])
+    (l()(),import1.ɵted((null as any),['\n      ']))
   ]
-  ,(check,view) => {
-    var comp:any = view.component;
-    const currVal_0:any = comp.footerHeight;
-    const currVal_1:any = comp.rowCount;
-    const currVal_2:any = comp.pageSize;
-    const currVal_3:any = comp.offset;
-    const currVal_4:any = comp.cssClasses.pagerLeftArrow;
-    const currVal_5:any = comp.cssClasses.pagerRightArrow;
-    const currVal_6:any = comp.cssClasses.pagerPrevious;
-    const currVal_7:any = comp.cssClasses.pagerNext;
-    const currVal_8:any = comp.messages.totalMessage;
-    const currVal_9:any = comp.selected.length;
-    const currVal_10:boolean = (!!comp.selectionType && comp.messages.selectedMessage);
-    check(view,1,1,[
+  ,(ck,v) => {
+    var co:any = v.component;
+    const currVal_0:any = co.footerHeight;
+    const currVal_1:any = co.rowCount;
+    const currVal_2:any = co.pageSize;
+    const currVal_3:any = co.offset;
+    const currVal_4:any = co.cssClasses.pagerLeftArrow;
+    const currVal_5:any = co.cssClasses.pagerRightArrow;
+    const currVal_6:any = co.cssClasses.pagerPrevious;
+    const currVal_7:any = co.cssClasses.pagerNext;
+    const currVal_8:any = co.messages.totalMessage;
+    const currVal_9:any = co.selected.length;
+    const currVal_10:boolean = (!!co.selectionType && co.messages.selectedMessage);
+    ck(v,1,1,[
       currVal_0,
       currVal_1,
       currVal_2,
@@ -301,38 +301,39 @@ function View_DatatableComponent_2():import1.ɵViewDefinition {
     );
   },(null as any));
 }
-export function View_DatatableComponent_0():import1.ɵViewDefinition {
+export function View_DatatableComponent_0(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
     import1.ɵqud(201326592,1,{bodyComponent: 0}),
-    import1.ɵted((null as any),['\n    ']),
-      import1.ɵeld(0,(null as any),(null as any),12,'div',[[
+    (l()(),import1.ɵted((null as any),['\n    '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),12,'div',[[
         'visibility-observer',
         ''
       ]
       ],[[
-        1,
-        'visible'
+        2,
+        'visible',
+        (null as any)
       ]
       ],[[
         (null as any),
         'visible'
       ]
-    ],(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      var comp:import6.DatatableComponent = view.component;
-      if (('visible' === eventName)) {
-        const pd_0:any = ((<any>comp.recalculate()) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      var co:import6.DatatableComponent = v.component;
+      if (('visible' === en)) {
+        const pd_0:any = ((<any>co.recalculate()) !== false);
+        ad = (pd_0 && ad);
       }
-      return allowDefault;
-    },(null as any),(null as any)),
+      return ad;
+    },(null as any),(null as any))),
     import1.ɵdid(106496,(null as any),0,import7.VisibilityDirective,[
       import1.ElementRef,
       import1.NgZone
     ]
     ,(null as any),{visible: 'visible'}),
-    import1.ɵted((null as any),['\n      ']),
-    import1.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DatatableComponent_1),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DatatableComponent_1)),
     import1.ɵdid(8192,(null as any),0,import8.NgIf,[
       import1.ViewContainerRef,
       import1.TemplateRef
@@ -342,20 +343,20 @@ export function View_DatatableComponent_0():import1.ɵViewDefinition {
         'ngIf'
       ]
     },(null as any)),
-    import1.ɵted((null as any),['\n      ']),
-      import1.ɵeld(0,(null as any),(null as any),2,'datatable-body',[[
+    (l()(),import1.ɵted((null as any),['\n      '])),
+      (l()(),import1.ɵeld(0,(null as any),(null as any),2,'datatable-body',[[
         'class',
         'datatable-body'
       ]
     ],[
       [
-        2,
+        4,
         'width',
         (null as any)
       ]
       ,
       [
-        2,
+        4,
         'height',
         (null as any)
       ]
@@ -388,31 +389,31 @@ export function View_DatatableComponent_0():import1.ɵViewDefinition {
       ]
 
     ]
-    ,(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      var comp:import6.DatatableComponent = view.component;
-      if (('page' === eventName)) {
-        const pd_0:any = ((<any>comp.onBodyPage($event)) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ,(v,en,$event) => {
+      var ad:boolean = true;
+      var co:import6.DatatableComponent = v.component;
+      if (('page' === en)) {
+        const pd_0:any = ((<any>co.onBodyPage($event)) !== false);
+        ad = (pd_0 && ad);
       }
-      if (('activate' === eventName)) {
-        const pd_1:any = ((<any>comp.activate.emit($event)) !== false);
-        allowDefault = (pd_1 && allowDefault);
+      if (('activate' === en)) {
+        const pd_1:any = ((<any>co.activate.emit($event)) !== false);
+        ad = (pd_1 && ad);
       }
-      if (('rowContextmenu' === eventName)) {
-        const pd_2:any = ((<any>comp.rowContextmenu.emit($event)) !== false);
-        allowDefault = (pd_2 && allowDefault);
+      if (('rowContextmenu' === en)) {
+        const pd_2:any = ((<any>co.rowContextmenu.emit($event)) !== false);
+        ad = (pd_2 && ad);
       }
-      if (('select' === eventName)) {
-        const pd_3:any = ((<any>comp.onBodySelect($event)) !== false);
-        allowDefault = (pd_3 && allowDefault);
+      if (('select' === en)) {
+        const pd_3:any = ((<any>co.onBodySelect($event)) !== false);
+        ad = (pd_3 && ad);
       }
-      if (('scroll' === eventName)) {
-        const pd_4:any = ((<any>comp.onBodyScroll($event)) !== false);
-        allowDefault = (pd_4 && allowDefault);
+      if (('scroll' === en)) {
+        const pd_4:any = ((<any>co.onBodyScroll($event)) !== false);
+        ad = (pd_4 && ad);
       }
-      return allowDefault;
-    },import9.View_DataTableBodyComponent_0,import9.RenderType_DataTableBodyComponent),
+      return ad;
+    },import9.View_DataTableBodyComponent_0,import9.RenderType_DataTableBodyComponent)),
       import1.ɵdid(122880,[[
         1,
         4
@@ -483,38 +484,43 @@ export function View_DatatableComponent_0():import1.ɵViewDefinition {
         'rowClass'
       ]
       ,
-      pageSize: [
+      externalPaging: [
         13,
+        'externalPaging'
+      ]
+      ,
+      pageSize: [
+        14,
         'pageSize'
       ]
       ,
       rows: [
-        14,
+        15,
         'rows'
       ]
       ,
       columns: [
-        15,
+        16,
         'columns'
       ]
       ,
       offset: [
-        16,
+        17,
         'offset'
       ]
       ,
       rowCount: [
-        17,
+        18,
         'rowCount'
       ]
       ,
       innerWidth: [
-        18,
+        19,
         'innerWidth'
       ]
       ,
       bodyHeight: [
-        19,
+        20,
         'bodyHeight'
       ]
 
@@ -527,9 +533,9 @@ export function View_DatatableComponent_0():import1.ɵViewDefinition {
       rowContextmenu: 'rowContextmenu'
     }
     ),
-    import1.ɵted((null as any),['\n      ']),
-    import1.ɵted((null as any),['\n      ']),
-    import1.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DatatableComponent_2),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵted((null as any),['\n      '])),
+    (l()(),import1.ɵand(8388608,(null as any),(null as any),1,(null as any),View_DatatableComponent_2)),
     import1.ɵdid(8192,(null as any),0,import8.NgIf,[
       import1.ViewContainerRef,
       import1.TemplateRef
@@ -539,38 +545,36 @@ export function View_DatatableComponent_0():import1.ɵViewDefinition {
         'ngIf'
       ]
     },(null as any)),
-    import1.ɵted((null as any),['\n    ']),
-    import1.ɵted((null as any),['\n  '])
+    (l()(),import1.ɵted((null as any),['\n    '])),
+    (l()(),import1.ɵted((null as any),['\n  ']))
   ]
-  ,(check,view) => {
-    var comp:import6.DatatableComponent = view.component;
-    check(view,3,0);
-    const currVal_0:any = comp.headerHeight;
-    check(view,6,0,currVal_0);
-    const currVal_1:any = comp.scrollbarV;
-    const currVal_2:any = comp.scrollbarH;
-    const currVal_3:any = comp.loadingIndicator;
-    const currVal_4:any = comp.rowHeight;
-    const currVal_5:any = comp.offsetX;
-    const currVal_6:any = comp.messages.emptyMessage;
-    const currVal_7:any = comp.selectionType;
-    const currVal_8:any = comp.selected;
-    const currVal_9:any = comp.rowIdentity;
-    const currVal_10:any = comp.rowDetail;
-    const currVal_11:any = comp.selectCheck;
-    const currVal_12:any = comp.trackByProp;
-    const currVal_13:any = comp.rowClass;
-    const currVal_14:any = comp.pageSize;
-    const currVal_15:any = comp.rows;
-    const currVal_16:any = comp.columns;
-    const currVal_17:any = comp.offset;
-    const currVal_18:any = comp.rowCount;
-    const currVal_19:any = comp.innerWidth;
-    const currVal_20:any = comp.bodyHeight;
-    check(view,9,1,[
-      currVal_1,
-      currVal_2,
-      currVal_3,
+  ,(ck,v) => {
+    var co:import6.DatatableComponent = v.component;
+    ck(v,3,0);
+    const currVal_1:any = co.headerHeight;
+    ck(v,6,0,currVal_1);
+    const currVal_4:any = co.scrollbarV;
+    const currVal_5:any = co.scrollbarH;
+    const currVal_6:any = co.loadingIndicator;
+    const currVal_7:any = co.rowHeight;
+    const currVal_8:any = co.offsetX;
+    const currVal_9:any = co.messages.emptyMessage;
+    const currVal_10:any = co.selectionType;
+    const currVal_11:any = co.selected;
+    const currVal_12:any = co.rowIdentity;
+    const currVal_13:any = co.rowDetail;
+    const currVal_14:any = co.selectCheck;
+    const currVal_15:any = co.trackByProp;
+    const currVal_16:any = co.rowClass;
+    const currVal_17:any = co.externalPaging;
+    const currVal_18:any = co.pageSize;
+    const currVal_19:any = co.rows;
+    const currVal_20:any = co.columns;
+    const currVal_21:any = co.offset;
+    const currVal_22:any = co.rowCount;
+    const currVal_23:any = co.innerWidth;
+    const currVal_24:any = co.bodyHeight;
+    ck(v,9,1,[
       currVal_4,
       currVal_5,
       currVal_6,
@@ -587,81 +591,88 @@ export function View_DatatableComponent_0():import1.ɵViewDefinition {
       currVal_17,
       currVal_18,
       currVal_19,
-      currVal_20
+      currVal_20,
+      currVal_21,
+      currVal_22,
+      currVal_23,
+      currVal_24
     ]
     );
-    const currVal_21:any = comp.footerHeight;
-    check(view,13,0,currVal_21);
-  },(check,view) => {
-    var comp:import6.DatatableComponent = view.component;
-    const currVal_0:any = import1.ɵnov(view,3).isVisible;
-    check(view,2,0,currVal_0);
-    const currVal_1:any = import1.ɵnov(view,9).bodyWidth;
-    const currVal_2:any = import1.ɵnov(view,9).bodyHeight;
-    check(view,8,0,currVal_1,currVal_2);
+    const currVal_25:any = co.footerHeight;
+    ck(v,13,0,currVal_25);
+  },(ck,v) => {
+    const currVal_0:any = import1.ɵnov(v,3).isVisible;
+    ck(v,2,0,currVal_0);
+    const currVal_2:any = import1.ɵnov(v,9).bodyWidth;
+    const currVal_3:any = import1.ɵnov(v,9).bodyHeight;
+    ck(v,8,0,currVal_2,currVal_3);
   });
 }
-const RenderType_DatatableComponent_Host:import1.RendererType2 = import1.ɵcrt({
-  encapsulation: 2,
-  styles: ([] as any[]),
-  data: {}
-}
-);
-function View_DatatableComponent_Host_0():import1.ɵViewDefinition {
+function View_DatatableComponent_Host_0(l:any):import1.ɵViewDefinition {
   return import1.ɵvid(0,[
-      import1.ɵeld(0,(null as any),(null as any),3,'ngx-datatable',[[
+      (l()(),import1.ɵeld(0,(null as any),(null as any),3,'ngx-datatable',[[
         'class',
         'ngx-datatable'
       ]
     ],[
       [
-        1,
-        'fixed-header'
+        2,
+        'fixed-header',
+        (null as any)
       ]
       ,
       [
-        1,
-        'fixed-row'
+        2,
+        'fixed-row',
+        (null as any)
       ]
       ,
       [
-        1,
-        'scroll-vertical'
+        2,
+        'scroll-vertical',
+        (null as any)
       ]
       ,
       [
-        1,
-        'scroll-horz'
+        2,
+        'scroll-horz',
+        (null as any)
       ]
       ,
       [
-        1,
-        'selectable'
+        2,
+        'selectable',
+        (null as any)
       ]
       ,
       [
-        1,
-        'checkbox-selection'
+        2,
+        'checkbox-selection',
+        (null as any)
       ]
       ,
       [
-        1,
-        'cell-selection'
+        2,
+        'cell-selection',
+        (null as any)
       ]
       ,
       [
-        1,
-        'single-selection'
+        2,
+        'single-selection',
+        (null as any)
       ]
       ,
       [
-        1,
-        'multi-selection'
+        2,
+        'multi-selection',
+        (null as any)
       ]
       ,
       [
-        1,
-        'multi-click-selection'
+        2,
+        'multi-click-selection',
+        (null as any)
       ]
 
     ]
@@ -669,36 +680,74 @@ function View_DatatableComponent_Host_0():import1.ɵViewDefinition {
         'window',
         'resize'
       ]
-    ],(view,eventName,$event) => {
-      var allowDefault:boolean = true;
-      if (('window:resize' === eventName)) {
-        const pd_0:any = ((<any>import1.ɵnov(view,1).onWindowResize()) !== false);
-        allowDefault = (pd_0 && allowDefault);
+    ],(v,en,$event) => {
+      var ad:boolean = true;
+      if (('window:resize' === en)) {
+        const pd_0:any = ((<any>import1.ɵnov(v,1).onWindowResize()) !== false);
+        ad = (pd_0 && ad);
       }
-      return allowDefault;
-    },View_DatatableComponent_0,RenderType_DatatableComponent),
+      return ad;
+    },View_DatatableComponent_0,RenderType_DatatableComponent)),
     import1.ɵdid(2285568,(null as any),2,import6.DatatableComponent,[
       import1.ElementRef,
       import1.KeyValueDiffers
     ]
     ,(null as any),(null as any)),
     import1.ɵqud(301989888,1,{columnTemplates: 1}),
-    import1.ɵqud(301989888,2,{rowDetail: 0})
+    import1.ɵqud(167772160,2,{rowDetail: 0})
   ]
-  ,(check,view) => {
-    check(view,1,0);
-  },(check,view) => {
-    const currVal_0:any = import1.ɵnov(view,1).isFixedHeader;
-    const currVal_1:any = import1.ɵnov(view,1).isFixedRow;
-    const currVal_2:any = import1.ɵnov(view,1).isVertScroll;
-    const currVal_3:any = import1.ɵnov(view,1).isHorScroll;
-    const currVal_4:any = import1.ɵnov(view,1).isSelectable;
-    const currVal_5:any = import1.ɵnov(view,1).isCheckboxSelection;
-    const currVal_6:any = import1.ɵnov(view,1).isCellSelection;
-    const currVal_7:any = import1.ɵnov(view,1).isSingleSelection;
-    const currVal_8:any = import1.ɵnov(view,1).isMultiSelection;
-    const currVal_9:any = import1.ɵnov(view,1).isMultiClickSelection;
-    check(view,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6,currVal_7,currVal_8,currVal_9);
+  ,(ck,v) => {
+    ck(v,1,0);
+  },(ck,v) => {
+    const currVal_0:any = import1.ɵnov(v,1).isFixedHeader;
+    const currVal_1:any = import1.ɵnov(v,1).isFixedRow;
+    const currVal_2:any = import1.ɵnov(v,1).isVertScroll;
+    const currVal_3:any = import1.ɵnov(v,1).isHorScroll;
+    const currVal_4:any = import1.ɵnov(v,1).isSelectable;
+    const currVal_5:any = import1.ɵnov(v,1).isCheckboxSelection;
+    const currVal_6:any = import1.ɵnov(v,1).isCellSelection;
+    const currVal_7:any = import1.ɵnov(v,1).isSingleSelection;
+    const currVal_8:any = import1.ɵnov(v,1).isMultiSelection;
+    const currVal_9:any = import1.ɵnov(v,1).isMultiClickSelection;
+    ck(v,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6,currVal_7,currVal_8,currVal_9);
   });
 }
-export const DatatableComponentNgFactory:import1.ComponentFactory<import6.DatatableComponent> = import1.ɵccf('ngx-datatable',import6.DatatableComponent,View_DatatableComponent_Host_0);
+export const DatatableComponentNgFactory:import1.ComponentFactory<import6.DatatableComponent> = import1.ɵccf('ngx-datatable',import6.DatatableComponent,View_DatatableComponent_Host_0,{
+  rows: 'rows',
+  columns: 'columns',
+  selected: 'selected',
+  scrollbarV: 'scrollbarV',
+  scrollbarH: 'scrollbarH',
+  rowHeight: 'rowHeight',
+  columnMode: 'columnMode',
+  headerHeight: 'headerHeight',
+  footerHeight: 'footerHeight',
+  externalPaging: 'externalPaging',
+  externalSorting: 'externalSorting',
+  limit: 'limit',
+  count: 'count',
+  offset: 'offset',
+  loadingIndicator: 'loadingIndicator',
+  selectionType: 'selectionType',
+  reorderable: 'reorderable',
+  sortType: 'sortType',
+  sorts: 'sorts',
+  cssClasses: 'cssClasses',
+  messages: 'messages',
+  rowIdentity: 'rowIdentity',
+  rowClass: 'rowClass',
+  selectCheck: 'selectCheck',
+  trackByProp: 'trackByProp'
+}
+,{
+  scroll: 'scroll',
+  activate: 'activate',
+  select: 'select',
+  sort: 'sort',
+  page: 'page',
+  reorder: 'reorder',
+  resize: 'resize',
+  rowContextmenu: 'rowContextmenu'
+}
+,([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9kYXRhdGFibGUuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9kYXRhdGFibGUuY29tcG9uZW50LnRzIiwibmc6Ly8vaG9tZS9kYWliZXJ0ZGllZ28vRGVza3RvcC9uZ3gvbmd4LWRhdGF0YWJsZS9idWlsZC9jb21wb25lbnRzL2RhdGF0YWJsZS5jb21wb25lbnQudHMuRGF0YXRhYmxlQ29tcG9uZW50Lmh0bWwiLCJuZzovLy9ob21lL2RhaWJlcnRkaWVnby9EZXNrdG9wL25neC9uZ3gtZGF0YXRhYmxlL2J1aWxkL2NvbXBvbmVudHMvZGF0YXRhYmxlLmNvbXBvbmVudC50cy5EYXRhdGFibGVDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCJcbiAgICA8ZGl2XG4gICAgICB2aXNpYmlsaXR5LW9ic2VydmVyXG4gICAgICAodmlzaWJsZSk9XCJyZWNhbGN1bGF0ZSgpXCI+XG4gICAgICA8ZGF0YXRhYmxlLWhlYWRlclxuICAgICAgICAqbmdJZj1cImhlYWRlckhlaWdodFwiXG4gICAgICAgIFtzb3J0c109XCJzb3J0c1wiXG4gICAgICAgIFtzb3J0VHlwZV09XCJzb3J0VHlwZVwiXG4gICAgICAgIFtzY3JvbGxiYXJIXT1cInNjcm9sbGJhckhcIlxuICAgICAgICBbaW5uZXJXaWR0aF09XCJpbm5lcldpZHRoXCJcbiAgICAgICAgW29mZnNldFhdPVwib2Zmc2V0WFwiXG4gICAgICAgIFtjb2x1bW5zXT1cImNvbHVtbnNcIlxuICAgICAgICBbaGVhZGVySGVpZ2h0XT1cImhlYWRlckhlaWdodFwiXG4gICAgICAgIFtyZW9yZGVyYWJsZV09XCJyZW9yZGVyYWJsZVwiXG4gICAgICAgIFtzb3J0QXNjZW5kaW5nSWNvbl09XCJjc3NDbGFzc2VzLnNvcnRBc2NlbmRpbmdcIlxuICAgICAgICBbc29ydERlc2NlbmRpbmdJY29uXT1cImNzc0NsYXNzZXMuc29ydERlc2NlbmRpbmdcIlxuICAgICAgICBbYWxsUm93c1NlbGVjdGVkXT1cImFsbFJvd3NTZWxlY3RlZFwiXG4gICAgICAgIFtzZWxlY3Rpb25UeXBlXT1cInNlbGVjdGlvblR5cGVcIlxuICAgICAgICAoc29ydCk9XCJvbkNvbHVtblNvcnQoJGV2ZW50KVwiXG4gICAgICAgIChyZXNpemUpPVwib25Db2x1bW5SZXNpemUoJGV2ZW50KVwiXG4gICAgICAgIChyZW9yZGVyKT1cIm9uQ29sdW1uUmVvcmRlcigkZXZlbnQpXCJcbiAgICAgICAgKHNlbGVjdCk9XCJvbkhlYWRlclNlbGVjdCgkZXZlbnQpXCI+XG4gICAgICA8L2RhdGF0YWJsZS1oZWFkZXI+XG4gICAgICA8ZGF0YXRhYmxlLWJvZHlcbiAgICAgICAgW3Jvd3NdPVwicm93c1wiXG4gICAgICAgIFtzY3JvbGxiYXJWXT1cInNjcm9sbGJhclZcIlxuICAgICAgICBbc2Nyb2xsYmFySF09XCJzY3JvbGxiYXJIXCJcbiAgICAgICAgW2xvYWRpbmdJbmRpY2F0b3JdPVwibG9hZGluZ0luZGljYXRvclwiXG4gICAgICAgIFtyb3dIZWlnaHRdPVwicm93SGVpZ2h0XCJcbiAgICAgICAgW3Jvd0NvdW50XT1cInJvd0NvdW50XCJcbiAgICAgICAgW29mZnNldF09XCJvZmZzZXRcIlxuICAgICAgICBbdHJhY2tCeVByb3BdPVwidHJhY2tCeVByb3BcIlxuICAgICAgICBbY29sdW1uc109XCJjb2x1bW5zXCJcbiAgICAgICAgW3BhZ2VTaXplXT1cInBhZ2VTaXplXCJcbiAgICAgICAgW29mZnNldFhdPVwib2Zmc2V0WFwiXG4gICAgICAgIFtyb3dEZXRhaWxdPVwicm93RGV0YWlsXCJcbiAgICAgICAgW3NlbGVjdGVkXT1cInNlbGVjdGVkXCJcbiAgICAgICAgW2lubmVyV2lkdGhdPVwiaW5uZXJXaWR0aFwiXG4gICAgICAgIFtib2R5SGVpZ2h0XT1cImJvZHlIZWlnaHRcIlxuICAgICAgICBbc2VsZWN0aW9uVHlwZV09XCJzZWxlY3Rpb25UeXBlXCJcbiAgICAgICAgW2VtcHR5TWVzc2FnZV09XCJtZXNzYWdlcy5lbXB0eU1lc3NhZ2VcIlxuICAgICAgICBbcm93SWRlbnRpdHldPVwicm93SWRlbnRpdHlcIlxuICAgICAgICBbcm93Q2xhc3NdPVwicm93Q2xhc3NcIlxuICAgICAgICBbc2VsZWN0Q2hlY2tdPVwic2VsZWN0Q2hlY2tcIlxuICAgICAgICBbZXh0ZXJuYWxQYWdpbmddPVwiZXh0ZXJuYWxQYWdpbmdcIlxuICAgICAgICAocGFnZSk9XCJvbkJvZHlQYWdlKCRldmVudClcIlxuICAgICAgICAoYWN0aXZhdGUpPVwiYWN0aXZhdGUuZW1pdCgkZXZlbnQpXCJcbiAgICAgICAgKHJvd0NvbnRleHRtZW51KT1cInJvd0NvbnRleHRtZW51LmVtaXQoJGV2ZW50KVwiXG4gICAgICAgIChzZWxlY3QpPVwib25Cb2R5U2VsZWN0KCRldmVudClcIlxuICAgICAgICAoc2Nyb2xsKT1cIm9uQm9keVNjcm9sbCgkZXZlbnQpXCI+XG4gICAgICA8L2RhdGF0YWJsZS1ib2R5PlxuICAgICAgPGRhdGF0YWJsZS1mb290ZXJcbiAgICAgICAgKm5nSWY9XCJmb290ZXJIZWlnaHRcIlxuICAgICAgICBbcm93Q291bnRdPVwicm93Q291bnRcIlxuICAgICAgICBbcGFnZVNpemVdPVwicGFnZVNpemVcIlxuICAgICAgICBbb2Zmc2V0XT1cIm9mZnNldFwiXG4gICAgICAgIFtmb290ZXJIZWlnaHRdPVwiZm9vdGVySGVpZ2h0XCJcbiAgICAgICAgW3RvdGFsTWVzc2FnZV09XCJtZXNzYWdlcy50b3RhbE1lc3NhZ2VcIlxuICAgICAgICBbcGFnZXJMZWZ0QXJyb3dJY29uXT1cImNzc0NsYXNzZXMucGFnZXJMZWZ0QXJyb3dcIlxuICAgICAgICBbcGFnZXJSaWdodEFycm93SWNvbl09XCJjc3NDbGFzc2VzLnBhZ2VyUmlnaHRBcnJvd1wiXG4gICAgICAgIFtwYWdlclByZXZpb3VzSWNvbl09XCJjc3NDbGFzc2VzLnBhZ2VyUHJldmlvdXNcIlxuICAgICAgICBbc2VsZWN0ZWRDb3VudF09XCJzZWxlY3RlZC5sZW5ndGhcIlxuICAgICAgICBbc2VsZWN0ZWRNZXNzYWdlXT1cIiEhc2VsZWN0aW9uVHlwZSAmJiBtZXNzYWdlcy5zZWxlY3RlZE1lc3NhZ2VcIlxuICAgICAgICBbcGFnZXJOZXh0SWNvbl09XCJjc3NDbGFzc2VzLnBhZ2VyTmV4dFwiXG4gICAgICAgIChwYWdlKT1cIm9uRm9vdGVyUGFnZSgkZXZlbnQpXCI+XG4gICAgICA8L2RhdGF0YWJsZS1mb290ZXI+XG4gICAgPC9kaXY+XG4gICIsIjxuZ3gtZGF0YXRhYmxlPjwvbmd4LWRhdGF0YWJsZT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O01DSU07UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO01BQUE7TUFjRTtRQUFBO1FBQUE7TUFBQTtNQUNBO1FBQUE7UUFBQTtNQUFBO01BQ0E7UUFBQTtRQUFBO01BQUE7TUFDQTtRQUFBO1FBQUE7TUFBQTtNQWpCRjtJQUFBO2dCQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO01BQUE7TUFBQTtNQUFBO0lBQUE7SUFBQTtJQWlCb0M7Ozs7SUFQbEM7SUFDQTtJQVBBO0lBQ0E7SUFDQTtJQUpBO0lBQ0E7SUFTQTtJQUNBO0lBSkE7SUFEQTtJQURBO0lBUEY7TUFVRTtNQUNBO01BUEE7TUFDQTtNQUNBO01BSkE7TUFDQTtNQVNBO01BQ0E7TUFKQTtNQURBO01BREE7SUFQRjtJQUFBOztJQUFBO0lBQUE7SUFBQSxTQUFBLG1CQUFBOzs7OztNQStDQTtRQUFBO1FBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO01BYUU7UUFBQTtRQUFBO01BQUE7TUFiRjtJQUFBO2dCQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQWFnQzs7OztJQVI5QjtJQUhBO0lBQ0E7SUFDQTtJQUdBO0lBQ0E7SUFDQTtJQUdBO0lBTkE7SUFJQTtJQUNBO0lBWEY7TUFLRTtNQUhBO01BQ0E7TUFDQTtNQUdBO01BQ0E7TUFDQTtNQUdBO01BTkE7TUFJQTtNQUNBO0lBWEY7SUFBQTs7Ozs7O0lBbkROO01BQ0k7UUFBQTtRQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7TUFFRTtRQUFBO1FBQUE7TUFBQTtNQUZGO0lBQUE7Z0JBQUE7OztJQUFBO0tBQUE7SUFFNEI7SUFDMUI7Z0JBQUE7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQWtCbUI7TUFDbkI7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtNQUFBO01BQUE7TUFzQkU7UUFBQTtRQUFBO01BQUE7TUFDQTtRQUFBO1FBQUE7TUFBQTtNQUNBO1FBQUE7UUFBQTtNQUFBO01BQ0E7UUFBQTtRQUFBO01BQUE7TUFDQTtRQUFBO1FBQUE7TUFBQTtNQTFCRjtJQUFBO2tCQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtLQUFBO01BQUE7TUFBQTtNQUFBO01BQUE7TUFBQTtJQUFBO0lBQUE7SUEwQmtDO0lBQ2pCO0lBQ2pCO2dCQUFBOzs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFjbUI7SUFDZjs7OztJQWpFTjtJQUlJO0lBREYsU0FDRSxTQURGO0lBcUJFO0lBQ0E7SUFDQTtJQUNBO0lBTUE7SUFNQTtJQURBO0lBSEE7SUFLQTtJQU5BO0lBUUE7SUFaQTtJQVdBO0lBRUE7SUFYQTtJQVRBO0lBUUE7SUFGQTtJQURBO0lBUUE7SUFDQTtJQWZGO01BRUU7TUFDQTtNQUNBO01BQ0E7TUFNQTtNQU1BO01BREE7TUFIQTtNQUtBO01BTkE7TUFRQTtNQVpBO01BV0E7TUFFQTtNQVhBO01BVEE7TUFRQTtNQUZBO01BREE7TUFRQTtNQUNBO0lBZkY7SUFBQTtJQTZCRTtJQURGLFVBQ0UsVUFERjs7SUFsREY7SUFBQSxTQUFBLFNBQUE7SUFzQkU7SUFBQTtJQUFBLFNBQUEsbUJBQUE7Ozs7O01DdkJOO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtJQUFBO2dCQUFBOzs7SUFBQTtLQUFBO2dCQUFBO2dCQUFBOzs7SUFBQTs7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBLFNBQUEsbUdBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=

@@ -60,6 +60,7 @@ import { DatatableRowDetailDirective } from './row-detail';
         [rowIdentity]="rowIdentity"
         [rowClass]="rowClass"
         [selectCheck]="selectCheck"
+        [externalPaging]="externalPaging"
         (page)="onBodyPage($event)"
         (activate)="activate.emit($event)"
         (rowContextmenu)="rowContextmenu.emit($event)"
@@ -800,6 +801,10 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   onBodyPage({ offset }: any): void {
+    //Sempre limpar a seleção quando mudar de página
+    this.selected = [];
+    this.allRowsSelected = false;
+
     this.offset = offset;
 
     this.page.emit({
@@ -830,6 +835,10 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   onFooterPage(event: any) {
+    // Limpar a Seleção ao mudar de página
+    this.selected = [];
+    this.allRowsSelected = false;
+
     this.offset = event.page - 1;
     this.bodyComponent.updateOffsetY(this.offset);
 
@@ -956,6 +965,10 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   onColumnSort(event: any): void {
+    // Sempre limpar a seleção qndo uma coluna for ordenada
+    this.selected = [];
+    this.allRowsSelected = false;
+
     const { sorts } = event;
 
     // this could be optimized better since it will resort
@@ -988,7 +1001,13 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
 
     // do the opposite here
     if (this.allRowsSelected) {
-      this.selected.push(...this.rows);
+      if (!this.externalPaging) {
+        this.selected = this.rows.slice(this.offset * this.limit, ((this.offset + 1) * this.limit));
+      } else {
+        this.selected = this.rows;
+      }
+    } else {
+      this.selected = [];
     }
 
     this.select.emit({
@@ -1004,7 +1023,7 @@ export class DatatableComponent implements OnInit, AfterViewInit, DoCheck {
    * @memberOf DatatableComponent
    */
   onBodySelect(event: any): void {
-    if (this.selected.length === this.rows.length && !this.allRowsSelected) {
+    if (this.selected.length === this.limit && !this.allRowsSelected && this.rows.length > 0) {
       this.allRowsSelected = true;
     } else {
       this.allRowsSelected = false;

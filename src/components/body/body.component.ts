@@ -75,6 +75,14 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
   @Input() selectCheck: any;
   @Input() trackByProp: string;
   @Input() rowClass: any;
+  /**
+   * If the table should use external paging
+   * otherwise its assumed that all data is preloaded.
+   *
+   * @type {boolean}
+   * @memberOf DatatableComponent
+   */
+  @Input() externalPaging: boolean = false;
 
   @Input() set pageSize(val: number) {
     this._pageSize = val;
@@ -155,7 +163,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
   @Output() activate: EventEmitter<any> = new EventEmitter();
   @Output() select: EventEmitter<any> = new EventEmitter();
   @Output() detailToggle: EventEmitter<any> = new EventEmitter();
-  @Output() rowContextmenu = new EventEmitter<{event: MouseEvent, row: any}>(false);
+  @Output() rowContextmenu = new EventEmitter<{ event: MouseEvent, row: any }>(false);
 
   @ViewChild(ScrollerComponent) scroller: ScrollerComponent;
 
@@ -180,13 +188,13 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
    * @memberOf DataTableBodyComponent
    */
   get scrollHeight(): number {
-    if(this.scrollbarV) {
+    if (this.scrollbarV) {
       return this.rowHeightsCache.query(this.rowCount - 1);
     }
   }
 
   get detailRowHeight(): number {
-    if(!this.rowDetail) return 0;
+    if (!this.rowDetail) return 0;
     return this.rowDetail.rowHeight;
   }
 
@@ -207,8 +215,8 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
 
   constructor() {
     // declare fn here so we can get access to the `this` property
-    this.rowTrackingFn = function(index: number, row: any): any {
-      if(this.trackByProp) {
+    this.rowTrackingFn = function (index: number, row: any): any {
+      if (this.trackByProp) {
         return `${row.$$index}-${this.trackByProp}`;
       } else {
         return row.$$index;
@@ -222,10 +230,10 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
    * @memberOf DataTableBodyComponent
    */
   ngOnInit(): void {
-    if(this.rowDetail) {
+    if (this.rowDetail) {
       this.listener = this.rowDetail.toggle.subscribe(({ type, value }) => {
-        if(type === 'row') this.toggleRowExpansion(value);
-        if(type === 'all') this.toggleAllRows(value);
+        if (type === 'row') this.toggleRowExpansion(value);
+        if (type === 'all') this.toggleAllRows(value);
       });
     }
   }
@@ -236,7 +244,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
    * @memberOf DataTableBodyComponent
    */
   ngOnDestroy(): void {
-    if(this.rowDetail) this.listener.unsubscribe();
+    if (this.rowDetail) this.listener.unsubscribe();
   }
 
   /**
@@ -248,10 +256,10 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
    */
   updateOffsetY(offset?: number): void {
     // scroller is missing on empty table
-    if(!this.scroller) {
-        return;
+    if (!this.scroller) {
+      return;
     }
-    if(this.scrollbarV && offset) {
+    if (this.scrollbarV && offset) {
       // First get the row Index that we need to move to.
       const rowIndex = this.pageSize * offset;
       offset = this.rowHeightsCache.query(rowIndex - 1);
@@ -274,7 +282,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
 
     // if scroll change, trigger update
     // this is mainly used for header cell positions
-    if(this.offsetY !== scrollYPos || this.offsetX !== scrollXPos) {
+    if (this.offsetY !== scrollYPos || this.offsetX !== scrollXPos) {
       this.scroll.emit({
         offsetY: scrollYPos,
         offsetX: scrollXPos
@@ -299,13 +307,13 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
   updatePage(direction: string): void {
     let offset = this.indexes.first / this.pageSize;
 
-    if(direction === 'up') {
+    if (direction === 'up') {
       offset = Math.ceil(offset);
-    } else if(direction === 'down') {
+    } else if (direction === 'down') {
       offset = Math.ceil(offset);
     }
 
-    if(direction !== undefined && !isNaN(offset)) {
+    if (direction !== undefined && !isNaN(offset)) {
       this.page.emit({ offset });
     }
   }
@@ -324,7 +332,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
     while (rowIndex < last && rowIndex < this.rowCount) {
       const row = this.rows[rowIndex];
 
-      if(row) {
+      if (row) {
         row.$$index = rowIndex;
         temp[idx] = row;
       }
@@ -377,7 +385,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
       height: rowHeight + 'px'
     };
 
-    if(this.scrollbarV) {
+    if (this.scrollbarV) {
       const idx = row ? row.$$index : 0;
 
       // const pos = idx * rowHeight;
@@ -418,7 +426,9 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
       first = this.rowHeightsCache.getRowIndex(this.offsetY);
       last = this.rowHeightsCache.getRowIndex(height + this.offsetY) + 1;
     } else {
-     // first = Math.max(this.offset * this.pageSize, 0);
+      if (!this.externalPaging) {
+        first = Math.max(this.offset * this.pageSize, 0);
+      }
       last = Math.min((first + this.pageSize), this.rowCount);
     }
 
@@ -434,7 +444,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
    * @memberOf DataTableBodyComponent
    */
   refreshRowHeightCache(): void {
-    if(!this.scrollbarV) return;
+    if (!this.scrollbarV) return;
 
     // clear the previous row height cache if already present.
     // this is useful during sorts, filters where the state of the
@@ -484,7 +494,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
     const viewPortFirstRowIndex = this.getAdjustedViewPortIndex();
 
     // If the detailRowHeight is auto --> only in case of non-virtualized scroll
-    if(this.scrollbarV) {
+    if (this.scrollbarV) {
       const detailRowHeight = this.detailRowHeight * (row.$$expanded ? -1 : 1);
       this.rowHeightsCache.update(row.$$index, detailRowHeight);
     }
@@ -511,11 +521,11 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
     // Capture the row index of the first row that is visible on the viewport.
     const viewPortFirstRowIndex = this.getAdjustedViewPortIndex();
 
-    for(const row of this.rows) {
+    for (const row of this.rows) {
       row.$$expanded = rowExpanded;
     }
 
-    if(this.scrollbarV) {
+    if (this.scrollbarV) {
       // Refresh the full row heights cache since every row was affected.
       this.refreshRowHeightCache();
     }

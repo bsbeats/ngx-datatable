@@ -5,6 +5,7 @@
  */
  /* tslint:disable */
 
+
 import * as import0 from '@angular/core';
 import * as import1 from '../../../../build/components/body/scroller.component';
 const styles_ScrollerComponent:any[] = ([] as any[]);
@@ -14,53 +15,54 @@ export const RenderType_ScrollerComponent:import0.RendererType2 = import0.ɵcrt(
   data: {}
 }
 );
-export function View_ScrollerComponent_0():import0.ɵViewDefinition {
+export function View_ScrollerComponent_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-    import0.ɵted((null as any),['\n    ']),
+    (l()(),import0.ɵted((null as any),['\n    '])),
     import0.ɵncd((null as any),0),
-    import0.ɵted((null as any),['\n  '])
+    (l()(),import0.ɵted((null as any),['\n  ']))
   ]
   ,(null as any),(null as any));
 }
-const RenderType_ScrollerComponent_Host:import0.RendererType2 = import0.ɵcrt({
-  encapsulation: 2,
-  styles: ([] as any[]),
-  data: {}
-}
-);
-function View_ScrollerComponent_Host_0():import0.ɵViewDefinition {
+function View_ScrollerComponent_Host_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
-      import0.ɵeld(0,(null as any),(null as any),1,'datatable-scroller',[[
+      (l()(),import0.ɵeld(0,(null as any),(null as any),1,'datatable-scroller',[[
         'class',
         'datatable-scroll'
       ]
     ],[
       [
-        2,
+        4,
         'height',
         'px'
       ]
       ,
       [
-        2,
+        4,
         'width',
         'px'
       ]
 
     ]
-    ,(null as any),(null as any),View_ScrollerComponent_0,RenderType_ScrollerComponent),
+    ,(null as any),(null as any),View_ScrollerComponent_0,RenderType_ScrollerComponent)),
     import0.ɵdid(122880,(null as any),0,import1.ScrollerComponent,[
       import0.ElementRef,
       import0.Renderer
     ]
     ,(null as any),(null as any))
   ]
-  ,(check,view) => {
-    check(view,1,0);
-  },(check,view) => {
-    const currVal_0:any = import0.ɵnov(view,1).scrollHeight;
-    const currVal_1:any = import0.ɵnov(view,1).scrollWidth;
-    check(view,0,0,currVal_0,currVal_1);
+  ,(ck,v) => {
+    ck(v,1,0);
+  },(ck,v) => {
+    const currVal_0:any = import0.ɵnov(v,1).scrollHeight;
+    const currVal_1:any = import0.ɵnov(v,1).scrollWidth;
+    ck(v,0,0,currVal_0,currVal_1);
   });
 }
-export const ScrollerComponentNgFactory:import0.ComponentFactory<import1.ScrollerComponent> = import0.ɵccf('datatable-scroller',import1.ScrollerComponent,View_ScrollerComponent_Host_0);
+export const ScrollerComponentNgFactory:import0.ComponentFactory<import1.ScrollerComponent> = import0.ɵccf('datatable-scroller',import1.ScrollerComponent,View_ScrollerComponent_Host_0,{
+  scrollbarV: 'scrollbarV',
+  scrollbarH: 'scrollbarH',
+  scrollHeight: 'scrollHeight',
+  scrollWidth: 'scrollWidth'
+}
+,{scroll: 'scroll'},['*']);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L3Njcm9sbGVyLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9ob21lL2RhaWJlcnRkaWVnby9EZXNrdG9wL25neC9uZ3gtZGF0YXRhYmxlL2J1aWxkL2NvbXBvbmVudHMvYm9keS9zY3JvbGxlci5jb21wb25lbnQudHMiLCJuZzovLy9ob21lL2RhaWJlcnRkaWVnby9EZXNrdG9wL25neC9uZ3gtZGF0YXRhYmxlL2J1aWxkL2NvbXBvbmVudHMvYm9keS9zY3JvbGxlci5jb21wb25lbnQudHMuU2Nyb2xsZXJDb21wb25lbnQuaHRtbCIsIm5nOi8vL2hvbWUvZGFpYmVydGRpZWdvL0Rlc2t0b3Avbmd4L25neC1kYXRhdGFibGUvYnVpbGQvY29tcG9uZW50cy9ib2R5L3Njcm9sbGVyLmNvbXBvbmVudC50cy5TY3JvbGxlckNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIlxuICAgIDxuZy1jb250ZW50PjwvbmctY29udGVudD5cbiAgIiwiPGRhdGF0YWJsZS1zY3JvbGxlcj48L2RhdGF0YWJsZS1zY3JvbGxlcj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lDQUE7Z0JBQ0k7SUFBeUI7Ozs7OztNQ0Q3QjtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO0tBQUE7Z0JBQUE7OztJQUFBO0tBQUE7OztJQUFBOztJQUFBO0lBQUE7SUFBQSxTQUFBLG1CQUFBOzs7Ozs7Ozs7In0=

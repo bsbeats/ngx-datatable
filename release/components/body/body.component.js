@@ -6,6 +6,14 @@ var scroller_component_1 = require("./scroller.component");
 var DataTableBodyComponent = (function () {
     function DataTableBodyComponent() {
         this.selected = [];
+        /**
+         * If the table should use external paging
+         * otherwise its assumed that all data is preloaded.
+         *
+         * @type {boolean}
+         * @memberOf DatatableComponent
+         */
+        this.externalPaging = false;
         this.scroll = new core_1.EventEmitter();
         this.page = new core_1.EventEmitter();
         this.activate = new core_1.EventEmitter();
@@ -336,7 +344,9 @@ var DataTableBodyComponent = (function () {
             last = this.rowHeightsCache.getRowIndex(height + this.offsetY) + 1;
         }
         else {
-            first = Math.max(this.offset * this.pageSize, 0);
+            if (!this.externalPaging) {
+                first = Math.max(this.offset * this.pageSize, 0);
+            }
             last = Math.min((first + this.pageSize), this.rowCount);
         }
         this.indexes = { first: first, last: last };
@@ -466,6 +476,7 @@ DataTableBodyComponent.propDecorators = {
     'selectCheck': [{ type: core_1.Input },],
     'trackByProp': [{ type: core_1.Input },],
     'rowClass': [{ type: core_1.Input },],
+    'externalPaging': [{ type: core_1.Input },],
     'pageSize': [{ type: core_1.Input },],
     'rows': [{ type: core_1.Input },],
     'columns': [{ type: core_1.Input },],

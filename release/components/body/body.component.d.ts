@@ -16,6 +16,14 @@ export declare class DataTableBodyComponent implements OnInit, OnDestroy {
     selectCheck: any;
     trackByProp: string;
     rowClass: any;
+    /**
+     * If the table should use external paging
+     * otherwise its assumed that all data is preloaded.
+     *
+     * @type {boolean}
+     * @memberOf DatatableComponent
+     */
+    externalPaging: boolean;
     pageSize: number;
     rows: any[];
     columns: any[];
